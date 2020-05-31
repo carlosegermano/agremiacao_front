@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SocioService } from '../../services/domain/socio.service';
 
 @IonicPage()
 @Component({
@@ -8,11 +9,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AssociadosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public socioService: SocioService) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AssociadosPage');
+    this.socioService.findAll().subscribe(
+      response => {
+        console.log(response);
+      }, error => {
+        console.log(error);
+      });
   }
 
 }
