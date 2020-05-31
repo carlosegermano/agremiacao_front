@@ -5,4 +5,5 @@ export interface SocioDTO {
     nome : string;
     cidade : Cidade;
     status : string;
+    cargo : string;
 }

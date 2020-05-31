@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SocioService } from '../../services/domain/socio.service';
+import { SocioDTO } from '../../models/socio.dto';
+import { API_CONFIG } from '../../config/api.config';
 
 @IonicPage()
 @Component({
@@ -8,6 +10,10 @@ import { SocioService } from '../../services/domain/socio.service';
   templateUrl: 'associados.html',
 })
 export class AssociadosPage {
+
+  bucketUrl: string = API_CONFIG.bucketBaseUrl;
+
+  items: SocioDTO[];
 
   constructor(
     public navCtrl: NavController, 
@@ -18,7 +24,7 @@ export class AssociadosPage {
   ionViewDidLoad() {
     this.socioService.findAll().subscribe(
       response => {
-        console.log(response);
+        this.items = response;
       }, error => {
         console.log(error);
       });

@@ -1,12 +1,24 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="football-outline"></ion-icon>
+      <ion-icon name="football"></ion-icon>
     </button>
     <ion-title>Associados</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+    <button ion-item *ngFor="let item of items">
+      <ion-avatar item-start>
+        <img src="{{ bucketUrl }}/part{{ item.id }}.jpg">
+      </ion-avatar>
+      <ion-label>
+        {{ item.nome }}
+        <p>{{ item.cidade.nome }}</p>
+        <p>{{ item.status }}</p>
+        <p id="socio" *ngIf="item.cargo != 'Sócio'">{{ item.cargo }}</p>
+      </ion-label>
+    </button>
+  </ion-list>
 </ion-content>
