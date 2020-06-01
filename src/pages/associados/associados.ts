@@ -25,9 +25,7 @@ export class AssociadosPage {
     this.socioService.findAll().subscribe(
       response => {
         this.items = response;
-      }, error => {
-        console.log(error);
-      });
+      }, error => {});
   }
 
 }
