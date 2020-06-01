@@ -5,6 +5,12 @@ page-associados {
     }
 
     button:hover {
-        background-color: yellow;
+        background-color: gray;
     }
+
+    .avatar img {
+        min-width: 65px;
+        min-height: 65px;
+    }
+
 }
