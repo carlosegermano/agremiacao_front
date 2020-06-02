@@ -6,4 +6,5 @@ export interface SocioDTO {
     cidade : Cidade;
     status : string;
     cargo : string;
+    imageUrl? : string;
 }
