@@ -1,6 +1,8 @@
 import { LocalUser } from "../models/local_user";
 import { STORAGE_KEYS } from "../config/storage_keys.config";
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class StorageService {
     
     getLocalUser() : LocalUser {

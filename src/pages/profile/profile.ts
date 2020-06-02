@@ -34,6 +34,7 @@ export class ProfilePage {
           }
         });
     } else {
+      console.log("Passou aqui!")
       this.navCtrl.setRoot('HomePage');
     }
   }
