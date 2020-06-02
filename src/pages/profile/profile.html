@@ -1,10 +1,13 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="football"></ion-icon>
+    </button>
     <ion-title>Perfil do Sócio</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class='bg'>
   <ion-avatar>
     <img class="circle" [src]="socio?.imageUrl || 'assets/imgs/avatar-blank.png'">
   </ion-avatar>
