@@ -48,4 +48,8 @@ export class HomePage {
         this.navCtrl.setRoot('AssociadosPage');
       }, error => {});    
   }
+
+  signup() {
+    this.navCtrl.push('SignupPage');
+  }
 }

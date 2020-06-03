@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="formGroup" (ngSubmit)="signupPartner(); $event.preventDefault()">
+  
+    <ion-item>
+      <ion-label>Nome*</ion-label>
+      <ion-input formControlName="nome" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Data de Nascimento*</ion-label>
+      <ion-input formControlName="dataNascimento" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Time que torce*</ion-label>
+      <ion-input formControlName="timeQueTorce" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Número da camisa*</ion-label>
+      <ion-input formControlName="numeroDaCamisa" type="number"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Data da Associação*</ion-label>
+      <ion-input formControlName="dataDaAssociacao" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Status*</ion-label>
+      <ion-select formControlName="status">
+        <ion-option value="1">Ativo</ion-option>
+        <ion-option value="2">Inativo</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Cargo*</ion-label>
+      <ion-select formControlName="cargo">
+        <ion-option value="1">Presidente</ion-option>
+        <ion-option value="2">Vice-Presidente</ion-option>
+        <ion-option value="3">Diretor</ion-option>
+        <ion-option value="4">Sócio</ion-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Cidade*</ion-label>
+      <ion-input formControlName="cidadeId" type="number"></ion-input>    
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Usuário*</ion-label>
+      <ion-input formControlName="usuario" type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Senha*</ion-label>
+      <ion-input formControlName="senha" name="senha" type="password"></ion-input>
+    </ion-item>
+    
+    <button ion-button block type="submit">Enviar</button>
+  </form>
+</ion-content>
