@@ -11,27 +11,27 @@
       <ion-label>Nome*</ion-label>
       <ion-input formControlName="nome" type="text"></ion-input>
     </ion-item>
-  
+    <p class="danger" *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors" margin-left>Valor inválido!</p>
     <ion-item>
       <ion-label>Data de Nascimento*</ion-label>
       <ion-input formControlName="dataNascimento" type="text"></ion-input>
     </ion-item>
-  
+    <p class="danger" *ngIf="formGroup.controls.dataNascimento.dirty && formGroup.controls.dataNascimento.errors" margin-left>Valor inválido!</p>
     <ion-item>
       <ion-label>Time que torce*</ion-label>
       <ion-input formControlName="timeQueTorce" type="text"></ion-input>
     </ion-item>
-  
+    <p class="danger" *ngIf="formGroup.controls.timeQueTorce.dirty && formGroup.controls.timeQueTorce.errors" margin-left>Valor inválido!</p>
     <ion-item>
       <ion-label>Número da camisa*</ion-label>
       <ion-input formControlName="numeroDaCamisa" type="number"></ion-input>
     </ion-item>
-  
+    <p class="danger" *ngIf="formGroup.controls.numeroDaCamisa.dirty && formGroup.controls.numeroDaCamisa.errors" margin-left>Valor inválido!</p>
     <ion-item>
       <ion-label>Data da Associação*</ion-label>
       <ion-input formControlName="dataDaAssociacao" type="text"></ion-input>
     </ion-item>
-  
+    <p class="danger" *ngIf="formGroup.controls.dataDaAssociacao.dirty && formGroup.controls.dataDaAssociacao.errors" margin-left>Valor inválido!</p>
     <ion-item>
       <ion-label stacked>Status*</ion-label>
       <ion-select formControlName="status">
@@ -56,24 +56,24 @@
         <ion-option *ngFor="let estado of estados; first as f" [value]="estado.id" [selected]="f">{{ estado.nome }}</ion-option>
       </ion-select>    
     </ion-item>
-
+    
     <ion-item>
       <ion-label stacked>Cidade*</ion-label>
       <ion-select formControlName="cidadeId" type="number">
         <ion-option *ngFor="let cidade of cidades" [value]="cidade.id">{{ cidade.nome }}</ion-option>
       </ion-select>    
     </ion-item>
-    
+
     <ion-item>
       <ion-label>Usuário*</ion-label>
       <ion-input formControlName="usuario" type="text"></ion-input>
     </ion-item>
-    
+    <p class="danger" *ngIf="formGroup.controls.usuario.dirty && formGroup.controls.usuario.errors" margin-left>Valor inválido!</p>
     <ion-item>
       <ion-label>Senha*</ion-label>
       <ion-input formControlName="senha" name="senha" type="password"></ion-input>
     </ion-item>
-    
-    <button ion-button block type="submit">Enviar</button>
+    <p class="danger" *ngIf="formGroup.controls.senha.dirty && formGroup.controls.senha.errors" margin-left>Valor inválido!</p>
+    <button ion-button block type="submit" [disabled]="formGroup.invalid">Enviar</button>
   </form>
 </ion-content>
