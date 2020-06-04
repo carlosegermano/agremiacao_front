@@ -1,9 +1,9 @@
-import { Cidade } from "./cidade";
+import { CidadeDTO } from "./cidade.dto";
 
 export interface SocioDTO {
     id : string;
     nome : string;
-    cidade : Cidade;
+    cidade : CidadeDTO;
     status : string;
     cargo : string;
     imageUrl? : string;
